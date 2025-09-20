@@ -80,6 +80,20 @@
       padding-bottom: 0.3rem;
     }
 
+    .experience-item, .education-item {
+      margin-bottom: 1.5rem;
+    }
+
+    .experience-item h3, .education-item h3 {
+      font-size: 1.25rem;
+      color: #000;
+      margin-bottom: 0.3rem;
+    }
+
+    .experience-item p, .education-item p {
+      color: var(--muted-color);
+    }
+
     .project {
       margin-bottom: 2rem;
     }
@@ -94,7 +108,7 @@
       color: var(--muted-color);
     }
 
-    .project a {
+    .project a.repo-link {
       display: inline-block;
       margin-top: 0.5rem;
       color: var(--accent-color);
@@ -102,7 +116,7 @@
       font-size: 0.95rem;
     }
 
-    .project a:hover {
+    .project a.repo-link:hover {
       text-decoration: underline;
     }
 
@@ -145,104 +159,212 @@
       margin-top: 2rem;
     }
 
+    /* Hover zoom effect */
+    .project-image {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      margin-bottom: 0.8rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .project-image:hover {
+      transform: scale(1.03);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Lightbox modal styles */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 8px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.4);
+    }
+
+    .lightbox:target {
+      display: flex;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 2rem;
+      color: white;
+      text-decoration: none;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
     @media (max-width: 600px) {
       nav a {
         display: block;
         margin: 0.5rem 0;
       }
     }
+
   </style>
 </head>
 <body>
 
   <header>
     <h1>Kevin Monjarrez</h1>
-    <p>Mechanical Engineer | CAD Designer | FEA Specialist</p>
+    <p>Mechanical Engineer • CAD Modeling • Simulation • Product Design</p>
   </header>
 
   <nav>
     <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
     <a href="#projects">Projects</a>
     <a href="#skills">Skills</a>
-    <a href="#resume">Resume</a>
     <a href="#contact">Contact</a>
   </nav>
 
   <main>
+
+    <!-- About Section -->
     <section id="about">
       <h2>About Me</h2>
       <p>
-        I am a mechanical engineer with expertise in mechanical design, product development, CAD modeling, and simulation.
-        I focus on delivering innovative and efficient engineering solutions, from concept to production-ready design.
-        With experience across multiple industries, I combine practical knowledge with digital tools to solve real-world challenges.
+        Mechanical Engineer with a strong foundation in designing, prototyping, and analyzing mechanical systems.
+        Skilled in CAD software, simulation tools, and cross-functional collaboration.
+        Passionate about delivering efficient, reliable, and manufacturable engineering solutions.
       </p>
     </section>
 
-<section id="projects">
-  <h2>Projects</h2>
+    <!-- Education Section -->
+    <section id="education">
+      <h2>Education</h2>
+      <div class="education-item">
+        <h3>Bachelor of Science in Mechanical Engineering</h3>
+        <p>University Name • Graduated: [Month Year]</p>
+        <p>Relevant coursework: Design & Manufacturing, Thermodynamics, Fluid Mechanics, CAD & Simulation.</p>
+      </div>
+      <div class="education-item">
+        <h3>Other Training / Certifications</h3>
+        <p>[Certification or short course if applicable]</p>
+      </div>
+    </section>
 
-  <div class="project">
-    <img src="images/robotic-arm.jpg" alt="Robotic Arm Project" class="project-image" />
-    <h3>3D-Printed Robotic Arm</h3>
-    <p>
-      Designed and prototyped a 6-DOF robotic arm using SolidWorks and Arduino. Implemented basic automation and GUI control with Python.
-    </p>
-    <a href="https://github.com/yourusername/robotic-arm" target="_blank">View on GitHub</a>
-  </div>
+    <!-- Experience Section -->
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="experience-item">
+        <h3>Mechanical Engineer at [Company Name]</h3>
+        <p>[Month Year] – Present</p>
+        <p>
+          Designing mechanical components, creating CAD models, performing FEA/thermal/fluid simulation, 
+          collaborating with manufacturing, improving product performance and reliability.
+        </p>
+      </div>
+      <div class="experience-item">
+        <h3>Intern / Assistant Engineer at [Company / Lab]</h3>
+        <p>[Month Year] – [Month Year]</p>
+        <p>
+          Supported design projects, prototype building, testing, documentation, and analysis tasks.
+        </p>
+      </div>
+    </section>
 
-  <div class="project">
-    <img src="images/heat-sink.jpg" alt="Heat Sink Simulation" class="project-image" />
-    <h3>Heat Sink Thermal Simulation</h3>
-    <p>
-      Simulated thermal behavior of various heat sink geometries using ANSYS Fluent. Improved thermal dissipation by 18% with optimized design.
-    </p>
-    <a href="https://github.com/yourusername/heat-sink-simulation" target="_blank">View on GitHub</a>
-  </div>
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2>Projects</h2>
 
-  <div class="project">
-    <img src="images/lift-device.jpg" alt="Lifting Mechanism Project" class="project-image" />
-    <h3>Compact Lifting Device</h3>
-    <p>
-      Engineered a compact lifting mechanism for warehouse automation, using finite element analysis to ensure structural safety and efficiency.
-    </p>
-    <a href="https://github.com/yourusername/lift-mechanism" target="_blank">View on GitHub</a>
-  </div>
-</section>
+      <div class="project">
+        <a href="#lightbox1">
+          <img src="images/robotic-arm.jpg" alt="Robotic Arm Project" class="project-image"/>
+        </a>
+        <h3>Robotic Arm Prototype</h3>
+        <p>Designed and prototyped a 6‑DOF robotic arm for automation tasks. Used SolidWorks and Arduino,
+           implemented motion control, and optimized structure for weight and rigidity.</p>
+        <a class="repo-link" href="https://github.com/yourusername/robotic-arm" target="_blank">View on GitHub</a>
+      </div>
 
+      <div class="project">
+        <a href="#lightbox2">
+          <img src="images/heat-sink-simulation.jpg" alt="Heat Sink Simulation" class="project-image"/>
+        </a>
+        <h3>Heat Sink Thermal Optimization</h3>
+        <p>Simulated and optimized fin geometry using ANSYS to reduce peak temperature, improved heat dissipation performance by ~20%.</p>
+        <a class="repo-link" href="https://github.com/yourusername/heat-sink-simulation" target="_blank">View on GitHub</a>
+      </div>
 
+      <div class="project">
+        <a href="#lightbox3">
+          <img src="images/lifting-mechanism.jpg" alt="Lifting Mechanism" class="project-image"/>
+        </a>
+        <h3>Compact Lifting Mechanism</h3>
+        <p>Engineered a compact, manufacturable lifting device. Modeled with CAD, validated via FEA, designed for cost-effective production.</p>
+        <a class="repo-link" href="https://github.com/yourusername/lifting-mechanism" target="_blank">View on GitHub</a>
+      </div>
+
+    </section>
+
+    <!-- Skills Section -->
     <section id="skills">
       <h2>Skills</h2>
       <ul class="skills">
         <li>SolidWorks</li>
         <li>AutoCAD</li>
-        <li>ANSYS</li>
+        <li>ANSYS / FEA / CFD</li>
         <li>MATLAB</li>
-        <li>Python</li>
-        <li>Fusion 360</li>
-        <li>GD&T</li>
-        <li>CFD</li>
-        <li>FEA</li>
+        <li>Product Design</li>
+        <li>CAD Modeling</li>
         <li>3D Printing</li>
+        <li>Mechanical Testing</li>
+        <li>Prototyping</li>
       </ul>
     </section>
 
-    <section id="resume">
-      <h2>Resume</h2>
-      <p>Download my latest resume to see my full experience, education, and project history.</p>
-      <a class="resume-link" href="resume.pdf" target="_blank">Download Resume</a>
-    </section>
-
+    <!-- Contact Section -->
     <section id="contact">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/kevin-monjarrez-b53576187" target="_blank">linkedin.com/in/kevin-monjarrez-b53576187</a></p>
       <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
     </section>
+
   </main>
 
+  <!-- Lightbox containers -->
+  <div id="lightbox1" class="lightbox">
+    <a href="#" class="lightbox-close">&times;</a>
+    <img src="images/robotic-arm.jpg" alt="Robotic Arm Large View"/>
+  </div>
+
+  <div id="lightbox2" class="lightbox">
+    <a href="#" class="lightbox-close">&times;</a>
+    <img src="images/heat-sink-simulation.jpg" alt="Heat Sink Large View"/>
+  </div>
+
+  <div id="lightbox3" class="lightbox">
+    <a href="#" class="lightbox-close">&times;</a>
+    <img src="images/lifting-mechanism.jpg" alt="Lifting Mechanism Large View"/>
+  </div>
+
   <footer>
-    <p>&copy; 2025 Your Name. All rights reserved.</p>
+    <p>&copy; 2025 Kevin Monjarrez. All rights reserved.</p>
   </footer>
 
 </body>
 </html>
+
