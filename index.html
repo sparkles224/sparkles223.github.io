@@ -1,34 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kevin Monjarrez | Engineering Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin Monjarrez - Engineer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
 </head>
 <body>
-  <!-- Navigation -->
-  <header>
-    <nav>
-      <h1>Kevin Monjarrez</h1>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <!-- Header -->
+    <header>
+        <nav>
+            <h1>Martha Wondowassen</h1>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- About Section -->
-  <section id="about" class="section">
-    <div class="about-container">
-      <div class="about-img">
-        <img src="images/profile.jpg" alt="Kevin Monjarrez">
-      </div>
-      <div class="about-text">
-        <h2>About Me</h2>
-        <p>
-          I am a Mechanical Engineer at General Dynamics Electric Boat, contributing to the design 
+    <!-- About Me -->
+    <section id="about">
+        <div class="about-container">
+            <img src="images/profile.jpg" alt="Martha Wondowassen" class="profile-img">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p> I am a Mechanical Engineer at General Dynamics Electric Boat, contributing to the design 
           and analysis of critical submarine systems for the Columbia Class. My work spans structural 
           and shock analyses, procurement coordination, and system design for submarine escape hatches, 
           rescue systems, and watertight doors, ensuring compliance with the Navy's demanding performance 
@@ -37,105 +34,51 @@
         <p>
           I bring a strong foundation in solid mechanics, mechatronics, and system dynamics, developed 
           through both industry and research. At Northwestern University, I earned my B.S. and M.S. in 
-          Mechanical Engineering, focusing on robotics, advanced mechatronics, and manufacturing.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="section">
-    <h2>Projects</h2>
-
-    <!-- Capstone Project Highlight -->
-    <div class="capstone">
-      <a href="projects/capstone.html">
-        <img src="images/capstone.jpg" alt="Capstone Project" class="lightbox-trigger">
-        <div class="overlay">
-          <h3>Capstone Project</h3>
-          <p>Advanced Engineering Design & Analysis</p>
+          Mechanical Engineering, focusing on robotics, advanced mechatronics, and manufacturing..</p>
+            </div>
         </div>
-      </a>
-    </div>
+    </section>
 
-    <!-- Smaller Projects Grid -->
-   <section id="projects" className="py-16 bg-gray-100">
-  <div className="max-w-6xl mx-auto px-6">
-    <h2 className="text-4xl font-bold text-center mb-12">Projects</h2>
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      
-      {/* Small Project 1 */}
-      <div className="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition">
-        <h3 className="text-xl font-semibold mb-2">Project 1</h3>
-        <p className="text-gray-600">Brief description of project 1.</p>
-      </div>
+    <!-- Projects -->
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="projects-grid">
+            <!-- Main Capstone Project -->
+            <a href="projects/capstone.html" class="project-card">
+                <img src="images/capstone.jpg" alt="Capstone Project">
+                <h3>Main Capstone Project</h3>
+            </a>
 
-      {/* Small Project 2 */}
-      <div className="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition">
-        <h3 className="text-xl font-semibold mb-2">Project 2</h3>
-        <p className="text-gray-600">Brief description of project 2.</p>
-      </div>
+            <!-- Minor Projects -->
+            <a href="projects/project1.html" class="project-card">
+                <img src="images/project1.jpg" alt="Project 1">
+                <h3>Project 1</h3>
+            </a>
 
-      {/* Small Project 3 */}
-      <div className="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition">
-        <h3 className="text-xl font-semibold mb-2">Project 3</h3>
-        <p className="text-gray-600">Brief description of project 3.</p>
-      </div>
+            <a href="projects/project2.html" class="project-card">
+                <img src="images/project2.jpg" alt="Project 2">
+                <h3>Project 2</h3>
+            </a>
 
-      {/* Small Project 4 */}
-      <div className="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition">
-        <h3 className="text-xl font-semibold mb-2">Project 4</h3>
-        <p className="text-gray-600">Brief description of project 4.</p>
-      </div>
+            <a href="projects/project3.html" class="project-card">
+                <img src="images/project3.jpg" alt="Project 3">
+                <h3>Project 3</h3>
+            </a>
 
-      {/* Capstone Project */}
-      <div className="col-span-2 lg:col-span-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-2xl shadow-xl p-8 hover:scale-105 transition">
-        <h3 className="text-2xl font-bold mb-3">Capstone Project</h3>
-        <p className="mb-4">
-          Haptic Thumb for Teleoperation in Nuclear Hotbox Environments.
-        </p>
-        <a
-        <a href="capstone.html">View Capstone</a>"
-          className="inline-block px-5 py-2 bg-white text-indigo-700 font-semibold rounded-lg shadow hover:bg-gray-200 transition"
-        >
-          View Capstone
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
+            <a href="projects/project4.html" class="project-card">
+                <img src="images/project4.jpg" alt="Project 4">
+                <h3>Project 4</h3>
+            </a>
+        </div>
+    </section>
 
+    <footer>
+        <p>&copy; 2025 Kevin Monjarrez. All rights reserved.</p>
+    </footer>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:kevin.monjarrez@email.com">kevin.monjarrez@email.com</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/kevinmonjarrez" target="_blank">View Profile</a></p>
-  </section>
-
-  <!-- Lightbox -->
-  <div id="lightbox" onclick="closeLightbox()">
-    <img id="lightbox-img">
-  </div>
-
-  <script>
-    // Lightbox for project images
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-
-    document.querySelectorAll('.lightbox-trigger').forEach(img => {
-      img.addEventListener('click', function(event) {
-        event.preventDefault();
-        lightbox.style.display = 'flex';
-        lightboxImg.src = this.src;
-      });
-    });
-
-    function closeLightbox() {
-      lightbox.style.display = 'none';
-    }
-  </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 </body>
 </html>
+
 
 
