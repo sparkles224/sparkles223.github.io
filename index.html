@@ -59,41 +59,52 @@
     </div>
 
     <!-- Smaller Projects Grid -->
-    <div class="project-grid">
-      <div class="project-card">
-        <a href="projects/project1.html">
-          <img src="images/project1.jpg" alt="Project 1" class="lightbox-trigger">
-          <div class="overlay">
-            <h3>Project 1</h3>
-          </div>
-        </a>
+   <section id="projects" className="py-16 bg-gray-100">
+  <div className="max-w-6xl mx-auto px-6">
+    <h2 className="text-4xl font-bold text-center mb-12">Projects</h2>
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      {/* Small Project 1 */}
+      <div className="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition">
+        <h3 className="text-xl font-semibold mb-2">Project 1</h3>
+        <p className="text-gray-600">Brief description of project 1.</p>
       </div>
-      <div class="project-card">
-        <a href="projects/project2.html">
-          <img src="images/project2.jpg" alt="Project 2" class="lightbox-trigger">
-          <div class="overlay">
-            <h3>Project 2</h3>
-          </div>
-        </a>
+
+      {/* Small Project 2 */}
+      <div className="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition">
+        <h3 className="text-xl font-semibold mb-2">Project 2</h3>
+        <p className="text-gray-600">Brief description of project 2.</p>
       </div>
-      <div class="project-card">
-        <a href="projects/project3.html">
-          <img src="images/project3.jpg" alt="Project 3" class="lightbox-trigger">
-          <div class="overlay">
-            <h3>Project 3</h3>
-          </div>
-        </a>
+
+      {/* Small Project 3 */}
+      <div className="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition">
+        <h3 className="text-xl font-semibold mb-2">Project 3</h3>
+        <p className="text-gray-600">Brief description of project 3.</p>
       </div>
-      <div class="project-card">
-        <a href="projects/project4.html">
-          <img src="images/project4.jpg" alt="Project 4" class="lightbox-trigger">
-          <div class="overlay">
-            <h3>Project 4</h3>
-          </div>
+
+      {/* Small Project 4 */}
+      <div className="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition">
+        <h3 className="text-xl font-semibold mb-2">Project 4</h3>
+        <p className="text-gray-600">Brief description of project 4.</p>
+      </div>
+
+      {/* Capstone Project */}
+      <div className="col-span-2 lg:col-span-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-2xl shadow-xl p-8 hover:scale-105 transition">
+        <h3 className="text-2xl font-bold mb-3">Capstone Project</h3>
+        <p className="mb-4">
+          Haptic Thumb for Teleoperation in Nuclear Hotbox Environments.
+        </p>
+        <a
+        <a href="capstone.html">View Capstone</a>"
+          className="inline-block px-5 py-2 bg-white text-indigo-700 font-semibold rounded-lg shadow hover:bg-gray-200 transition"
+        >
+          View Capstone
         </a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Contact Section -->
   <section id="contact" class="section">
